@@ -1,0 +1,9 @@
+{% extends "annslogsapp/base.html" %}
+{% block content %}
+    <form method="post" action="{% url 'annsusers:logout' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">Log out</button>
+        <input type="hidden" name="next" value="{% url 'annslogsapp:index' %}" />
+    </form>
+{% endblock content %}
