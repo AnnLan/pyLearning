@@ -1,0 +1,1 @@
+web: gunicorn annslogs.wsgi --log-file -
